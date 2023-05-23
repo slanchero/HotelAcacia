@@ -1,0 +1,528 @@
+<%-include("partials/head")-%>
+
+<!--AQUI COMIENZA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS- QUE LO REQUIERAN-->
+
+<body>
+    <!--Comienzo Topbar-->
+    <%-include("partials/topbar")-%>
+    <!-- Termina Topbar -->
+
+
+    <!-- Comienza la barra de navegación -->
+    <%-include("partials/navbar",{name:"Inicio"})-%>
+    <!-- Fin Barra de navegación -->
+
+<!--HASTA AQUI LLEGA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS...-->
+
+    <!-- Comienzo del Carrusel-->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/Carrusel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Bienvenidos</h4>
+                            <h1 class="display-3 text-white mb-md-4">Al paraiso de Acacías</h1>
+                            <a href="/Reservar" class="btn btn-primary py-md-3 px-md-5 mt-2">Reservar Ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/Carrusel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Aventura y descanso</h4>
+                            <h1 class="display-3 text-white mb-md-4">¡El Horizonte del Llano es para todos!</h1>
+                            <a href="/Reservar" class="btn btn-primary py-md-3 px-md-5 mt-2">Reservar Ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/Carrusel-3.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Tours y promociones</h4>
+                            <h1 class="display-3 text-white mb-md-4">¡Te esperamos!</h1>
+                            <a href="/Reservar" class="btn btn-primary py-md-3 px-md-5 mt-2">Reservar Ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n2"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n2"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel termina -->
+
+
+    <!-- Comienzo del buscador -->
+    <%-include("partials/browser")-%>
+    <!-- Fin del buscador -->
+
+
+    <!-- comienza Acerca de nosotros  -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="img/ImagenHotelAbout.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Acerca de nosotros</h6>
+                        <h1 class="mb-3">EL HORIZONTE DEL LLANO</h1>
+                        <p>
+                            Somos un hotel ubicado en la zona rural de Acacías
+                            Atendemos turistas nacionales e internacionales con 
+                            ganas de conocer la naturaleza de nuestro departamento, 
+                            como disfrutar el Festival del Retorno, la biodiversidad, 
+                            historia y actividades al aire libre que ofrece nuestro 
+                            departamento.
+                        </br>
+                            El Horizonte del Llano es el lugar apropiado para todos,
+                            gracias a nuestra gran diversidad en la atención y servicios.
+                            Aquí podrás encontrar lo que quieres vivir, 
+                            seremos tu segundo hogar.
+                        </p>
+                        <div class="row mb-4">
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/LogoHotel.png" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid" src="img/Compartida.jpg" alt="">
+                            </div>
+                        </div>
+                        <a href="/book.html" class="btn btn-primary mt-1">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina acerca de nosotros  -->
+
+
+    <!-- Comienza caracteristicas -->
+    <div class="container-fluid pb-5">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-money-check-alt text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Buenos precios</h5>
+                            <p class="m-0">Manejamos precios flexible para todos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-award text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Mejor servicio</h5>
+                            <p class="m-0">Contamos con buena administración y buenos empleados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-globe text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Conexión internacional</h5>
+                            <p class="m-0">Tenemos experiencia en servicios a extranjeros.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina caracterisiticas -->
+
+
+    <!-- Inicia hospedaje info -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Información</h6>
+                <h1>Hospedaje</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/Ordinaria_Parejas.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Habitaciones ordinarias</h5>
+                            <span>Individual y Parejas</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/Compartida.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Habitaciones compartidas</h5>
+                            <span>(4 Personas x Habitación)</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/Restaurante.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Restaurante</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/Parqueadero.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Parqueadero</h5>
+                            <span>25 Vehículos</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/Transporte.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Transporte</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/GuiaTuristica.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Guía turistica</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina hospedaje info -->
+
+
+    <!-- Comienza info adicional servicio -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Información adicional</h6>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+                        <h5 class="mb-2">Transporte</h5>
+                        <p class="m-0">
+                            Es un servicio de microbus que conecta el casco urbano de Acacias con el hotel. El viaje tiene una duración de 90 minutos.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
+                        <h5 class="mb-2">Reservas</h5>
+                        <p class="m-0">
+                            El proceso de reseva de alojamiento se realiza por este sistema, aquí podrá reservar todos los servicios que quiera.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
+                        <h5 class="mb-2">Ingreso y salida</h5>
+                        <p class="m-0">Debe tener en cuenta que el proceso de check-in se realiza desde las 3:00 pm y el de check-out antes de 1:00 pm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina info adicional de servicios -->
+
+    <!--Comienza registro -->
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Recibe</h6>
+                        <h1 class="text-white"><span class="text-primary">5% Desc.</span> por registrarte</h1>
+                    </div>
+                    <p class="text-white">
+                        Nos complace ofrecerte la oportunidad de registrarte para que puedas planear fácilmente tus próximas vacaciones 
+                        y obtener las mejores ofertas en habitaciones de hotel. Regístrate hoy y obtén acceso a todas nuestras 
+                        increíbles ofertas y promociones exclusivas.
+                    </p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Te enterarás de todas las promociones.</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Obtendrás descuentos por ser socio.</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Podrás comentar tu experiencias.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-primary text-center p-4">
+                            <h1 class="text-white m-0">Registrarse</h1>
+                        </div>
+                        <div class="card-body rounded-bottom bg-white p-5">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control p-4" placeholder="Nombre y apellido" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control p-4" placeholder="Correo" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control p-4" placeholder="Contraseña" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control p-4" placeholder="Repetir contraseña" required="required" />
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-block py-3" type="submit">Registrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina registro -->
+
+
+    <!-- Comienza los guías -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Guía turistica</h6>
+                <h1>Nuestros guías</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Carolina García</h5>
+                            <p class="m-0">Español | Inglés</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Juanito Perez</h5>
+                            <p class="m-0">Español | Alemán</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Liz Diaz</h5>
+                            <p class="m-0">Español | Italiano</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Juan Hernández</h5>
+                            <p class="m-0">Español | Francés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina Guías -->
+
+
+    <!-- Comienza reseña -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Reseñas</h6>
+                <h1>Lo que dicen nuestros clientes</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="text-center pb-4">
+                    <img class="img-fluid mx-auto" src="img/Testimonio1.png" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5">
+                            Excelente hotel. El personal es muy amable y atento, la habitación es cómoda y la ubicación es perfecta.
+                        </p>
+                        <h5 class="text-truncate">Carmen Pérez</h5>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="img/Testimonio2.png" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5">
+                            Muy buena experiencia. Las instalaciones están limpias y bien cuidadas, y el desayuno es delicioso.
+                        </p>
+                        <h5 class="text-truncate">Sara Tovar</h5>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="img/Testimonio3.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5">
+                            Un lugar muy agradable para hospedarse en Acacías. El ambiente es tranquilo y relajante, y el servicio es excepcional.
+                        </p>
+                        <h5 class="text-truncate">José Echeverry</h5>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="img/Testimonio4.png" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5">
+                            El Horizonte del Llano: ¡espectacular! Personal acogedor, vista impresionante, comida deliciosa. ¡Altamente recomendado!
+                        </p>
+                        <h5 class="text-truncate">Sofía Rodriguez</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina reseñas -->
+
+    <!-- Comienza el pie de pagina -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h3 class="text-primary"><span class="text-white">Horizonte</span> Del Llano</h3>
+                </a>
+                <p>Un paraiso de Acacías</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Redes Sociales</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>instagram</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facebook</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>LinkedIn</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Twitter</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Sitio Oficial</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Información</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Reservar</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guías</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Reseñas</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contáctanos</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>No. 23, Calle 12 #67, Acacías, Meta</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>Admin@HorizonteDelLlano.com</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Información</h6>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="#">El Horizonte Del Llano</a>. All Rights Reserved.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">Designed by <a href="">Hotel El Horizonte Del Llano</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Termina el pie de pagina-->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

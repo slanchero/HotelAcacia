@@ -1,0 +1,50 @@
+<%-include("partials/head")-%>
+
+<!--AQUI COMIENZA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS- QUE LO REQUIERAN-->
+<body>
+    <!-- Empieza la Topbar -->
+    <%-include("partials/topbar")-%>
+    <!-- Termina Topbar -->
+  
+    <!-- Comienza la barra de navegación -->
+    <%-include("partials/navbar",{name:""})-%>
+    <!-- Fin Barra de navegación -->
+
+    <div class="container-fluid" style="align-items: center;">
+        <div class="container" style="position: absolute;
+        top:  50%;
+        left: 55%;
+        transform: translate(-50%,-55%);">
+            <a href="" class="navbar-brand">
+                
+                
+            </a>
+            <h1 class="text-primary" style="font-size: 300px;">
+                404
+                <img class="logo-navbar" src="img/LogoHotel.png" alt="" style="width: 300px; height: 300px;">
+                <h2 class="m-0 text-primary" style="position: absolute; top:  80%; left: 1%; font-size: 70px;"><span class="text-dark">OOPS...</h2>
+                <h2 class="m-0 text-primary" style="position: absolute; top:  89%; left: 25%;"><span class="text-dark">Pagina</span> no encontrada</h2>
+            </h1>
+            
+        </div>
+        
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

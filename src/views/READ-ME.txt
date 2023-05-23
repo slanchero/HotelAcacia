@@ -1,0 +1,11 @@
+Jose: todo del Book y el gestionamiento del Book
+Stiven: About, Index, Contact, Pay (Lo estaré haciendo)
+
+Nota: Puedes usar el contenido del package.html para terminar el Book.
+
+Nota2: Poner las imagenes en la carpeta img, no tocar Lib y Scss.
+
+
+Colores:
+Color morado: #5C28EA
+Color verde: #7AB730

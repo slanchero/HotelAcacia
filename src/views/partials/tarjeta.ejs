@@ -1,0 +1,21 @@
+<!--Comienza tarjeta-->
+<div class="room-card my-2">
+    <img src="img/Compartida.jpg" alt="Habitación">
+    <div>
+      <h2 class="text-primary text-uppercase" style="letter-spacing: 2px;"><%if(habitacion.idTipoH==2){%>
+          HABITACION ORDINARIA SIMPLE
+        <%}else if(habitacion.idTipoH==1){%>
+          HABITACION ORDINARIA DOBLE
+        <%}else{%>
+          HABITACION COMPARTIDA
+        <%}%>
+      </h2>
+      <p><%=habitacion.Descripcion%></p>
+      <p>Precio: <%=habitacion.precioUnitario%> por noche</p>
+      <button id="<%=habitacion.idHabitacion%>" class="btn btn-primary mt-1">Reservar</button>
+      <%if(habitacion.idTipoH){%>
+      <p class="my-2">Cupos disponibles: <%=habitacion.cupoMax-habitacion.totalPersonasReservadas%></p>
+      <%}%>
+    </div>
+</div>
+<!--Fin de la tarjeta-->

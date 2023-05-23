@@ -1,0 +1,185 @@
+<%-include("partials/head")-%>
+
+<!--AQUI COMIENZA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS- QUE LO REQUIERAN-->
+<body>
+    <!-- Empieza la Topbar -->
+    <%-include("partials/topbar")-%>
+    <!-- Termina Topbar -->
+  
+
+    <!-- Comienza la barra de navegación -->
+    <%-include("partials/navbar",{name:"Reservar"})-%>
+    <!-- Fin Barra de navegación -->
+
+<!--HASTA AQUI LLEGA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS...-->
+
+    <!-- Gestión reserva -->
+    
+    <div class="container-fluid py-4">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Comienza gestión -->
+                    <h1 class="text-uppercase" style="padding-bottom: 50px; padding-left: 20%; color: #5C28EA;">
+                        Gestión de reserva
+                    </h1>
+                    <h4>
+                        Check-in y Check-out
+                    </h4>
+                    <h6 style="color:grey;">
+                        *El Check-in esta disponible desde las 3:00PM
+                    </h6>
+                    <h6 style="color:grey;">
+                        *El Check-out esta disponible desde las 1:00PM
+                    </h6>
+                    <div class="pb-3">
+                        <div class="blog-item">
+                            <div class="position-relative">
+                                <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div id="n" name="<%=n%>"></div>
+                        <%for (let i = 0; i < n; i++) { %>
+                        <%-include("partials/Huesped",{id:i})-%>
+                        <% } %>
+                    </div>
+                    <!-- Termina gestión reserva-->
+
+                </div>
+
+                <!-- Comienza detalles reserva -->
+                <div class="col-lg-5,5 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column text-center bg-white mb-2 py-6 px-4" style=" height: 98%;width: 380px; border-radius: 10px;">
+                        <h4 style="padding-top: 10%;">
+                            Detalles de la reserva
+                        </h4>
+                        <img src="img/Ordinaria_Parejas.jpg" class="img-fluid mx-auto mb-3" style="width: 250px; border-radius: 15%;">
+                        <h5 class="text mb-4" style="font-style: italic;"><%=data.nombreTipo%></h5>
+                        <h6 class="text-primary" style="text-align: left">
+                            Descripción
+                            <div class="text-body mb-5" style="text-align: left; font-size: 14px;">
+                                <%=data.Descripcion%>
+                            </div>
+                        </h6>
+                        <h6 class="text-primary mb-2" style="text-align: left">
+                            Check-in:
+                            <content class="text-body" style="font-size: 14px;"><%=fechai%>, 3:00 PM</content>
+                        </h6>
+                        <h6 class="text-primary mb-5" style="text-align: left">
+                            Check-out:
+                            <content class="text-body" style="font-size: 14px;"><%=fechaf%>, 1:00 PM</content>
+                        </h6>
+                        <h6 class="text-primary mb-5" style="text-align: left">
+                            Huespedes:
+                            <content class="text-body" style="font-size: 14px;"><%=data.cupoMax%> Personas</content>
+                        </h6>
+                        <h6 class="text-dark" style="text-align: left; padding-top: 30%;">
+                            Habitación:------------- <%=data.precioUnitario*n%> COP
+                        </h6>
+                        <h6 class="text-dark mb-4" style="text-align: left">
+                            Servicios:---------------- 0 COP
+                        </h6>
+                        <h6 class="text-dark mb-5" style="text-align: left">
+                            TOTAL:----------------- <%=data.precioUnitario%> COP
+                        </h6>
+                        <button id="continuar" type="button mb-5" margin="auto" class="form-control mt-auto mb-5"             style="background-color: blueviolet; border-radius: 10px; height: 60px; width: 250px; align-self: center;">
+                            <div class="text-white">
+                                Continuar
+                            </div>
+                        </button>
+                </div>
+            <!-- Termina detalles reserva -->
+            </div>
+        </div>
+    </div>
+    <!-- Termina  -->
+
+    <!-- Comienza el pie de pagina -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h3 class="text-primary"><span class="text-white">Horizonte</span> Del Llano</h3>
+                </a>
+                <p>Un paraiso de Acacías</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Redes Sociales</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>instagram</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facebook</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>LinkedIn</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Twitter</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Sitio Oficial</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Información</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Reservar</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guías</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Reseñas</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contáctanos</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>No. 23, Calle 12 #67, Acacías, Meta</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>Admin@HorizonteDelLlano.com</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Información</h6>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="#">El Horizonte Del Llano</a>. All Rights Reserved.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">Designed by <a href="">Hotel El Horizonte Del Llano</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Termina el pie de pagina-->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/huesped.js"></script>
+</body>
+
+</html>

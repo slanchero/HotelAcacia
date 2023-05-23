@@ -1,0 +1,155 @@
+<%-include("partials/head")-%>
+
+<!--AQUI COMIENZA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS- QUE LO REQUIERAN-->
+<body>
+    <!-- Empieza la Topbar -->
+    <%-include("partials/topbar")-%>
+    <!-- Termina Topbar -->
+
+    <!-- Comienza la barra de navegación -->
+    <%-include("partials/navbar",{name:""})-%>
+    <!-- Fin Barra de navegación -->
+
+<!--HASTA AQUI LLEGA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS...-->
+
+    <!-- Comienza encabezado -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 220px">
+                <h3 class="display-4 text-white text-uppercase">Reserva exitosa</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Inicio</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Reserva realizada</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina encabezado--> 
+
+<body>
+    <!-- comienza Acerca de nosotros  -->
+    <div class="container-fluid py-5 " >
+        <div class="container pt-5 pb-3">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="img/Carrusel-2.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class= "col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Pago exitoso</h6>
+                        <h1 class="mb-3">Confirmación de Reserva</h1>
+                        <p>¡Gracias por tu reserva! 
+                        <br> Tu reserva ha sido confirmada y la factura enviada al correo. ¡Estamos emocionados de tenerte como nuestro huésped!</p>
+                        <!-- <p>Detalles de la reserva:</p>
+                        <p>Código de reserva: 32GF4A</p>
+                        <ul>
+                          <li>Fecha de llegada: 22 de mayo de 2023</li>
+                          <li>Hora: 15:20</li>
+                          <li>Fecha de salida: 28 de mayo de 2023</li>
+                          <li>Hora: 11:30</li>
+                          <li>Tipo de habitación: Habitación Doble</li>
+                          <li>Número de personas: 2</li>
+                        </ul> -->
+                        <p>Si tienes alguna pregunta o necesitas realizar cambios en tu reserva, por favor contáctanos.</p>
+                        <p>¡Esperamos darte la bienvenida pronto!</p>
+                        <p>Equipo de Reservas</p>
+                        <div class="row mb-4">
+                            <div class="col-4">
+                                <img class="img-fluid mx-auto" src="img/LogoHotel.png" alt="">
+                            </div>
+                        </div>
+                        <a href="/" class="btn btn-primary mt-1">Imprimir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termina acerca de nosotros  -->
+    <!-- Comienza el pie de pagina -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h3 class="text-primary"><span class="text-white">Horizonte</span> Del Llano</h3>
+                </a>
+                <p>Un paraiso de Acacías</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Redes Sociales</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>instagram</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facebook</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>LinkedIn</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Twitter</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Sitio Oficial</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Información</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Reservar</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guías</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Reseñas</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contáctanos</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>No. 23, Calle 12 #67, Acacías, Meta</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>Admin@HorizonteDelLlano.com</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Información</h6>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="#">El Horizonte Del Llano</a>. All Rights Reserved.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">Designed by <a href="">Hotel El Horizonte Del Llano</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Termina el pie de pagina-->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+

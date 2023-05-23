@@ -1,0 +1,252 @@
+<%-include("partials/head")-%>
+
+<!--AQUI COMIENZA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS- QUE LO REQUIERAN-->
+<body>
+    <!-- Empieza la Topbar -->
+    <%-include("partials/topbar")-%>
+    <!-- Termina Topbar -->
+  
+    <!-- Comienza la barra de navegación -->
+    <%-include("partials/navbar",{name:""})-%>
+    <!-- Fin Barra de navegación -->
+
+<!--HASTA AQUI LLEGA LA BARRA DE NAVEGACIÓN QUE DEBEN TENER TODAS LAS VISTAS...-->
+
+    <!-- Comienza servicios adicionales -->
+    <div class="container-fluid py-4">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="text-uppercase mb-5" style="letter-spacing: 5px; text-align: center; color: #5C28EA;">
+                        Servicios adicionales
+                    </h2>
+                    <!-- Rounded switch -->
+                    <h4 class="text-uppercase">
+                        transporte
+                        <label class="switch" style="height: 25px; width: 50px;">
+                            <input id="inputT" name="100000" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </h4>
+                    <div class="text-body mb-4">
+                        Servicio de transporte entre el pueblo y el hotel, este tiene una duracion de 90 minutos aprox y capacidad de 20 personas.
+                        <p class="text-primary " id="advisorT"></p>
+                    </div>
+                    <div class="text-dark mb-5">
+                        TOTAL:----------------- <%=100000*n%> COP
+                    </div>
+                    
+                    <h4 class="text-uppercase">
+                        parqueadero
+                        <label class="switch" style="height: 25px; width: 50px;">
+                            <input id="inputP" name="25000" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </h4>
+                    <div class="text-body mb-4">
+                        Apartar un espacio de nuestro parqueadero por la duracion de la estancia.
+                        <p class="text-primary " id="advisorP"></p>
+                    </div>
+                    <div class="text-dark mb-5">
+                        TOTAL:----------------- 25000 COP
+                    </div>
+                    
+                    <h4 class="text-uppercase">
+                        restaurante
+                        <label class="switch" style="height: 25px; width: 50px;">
+                            <input id="inputR" name="70000" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </h4>
+                    <div class="text-body mb-4">
+                        Acceso al restaurante y buffet durante la estancia en el hotel.
+                        <p class="text-primary " id="advisorR"></p>
+                    </div>
+                    <div class="text-dark mb-5">
+                        TOTAL:----------------- <%=70000*n%> COP
+                    </div>
+                    <h4 class="text-uppercase">
+                        Lavanderia
+                        <label class="switch" style="height: 25px; width: 50px;">
+                            <input id="inputL" name="30000" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </h4>
+                    <div class="text-body mb-4">
+                        Servicio de la lavanderia ilimitada durante la duracion de su estancia.
+                    </div>
+                    <div class="text-dark mb-5">
+                        TOTAL:----------------- 30.000 COP
+                    </div>
+                    <h4 class="text-uppercase">
+                        Guía turistica
+                        <label class="switch" style="height: 25px; width: 50px;">
+                            <input name="70000" id="inputG" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </h4>
+                    <div class="text-body mb-4">
+                        Acceder a nuestra guia turistica de los sitios mas interesantes de los alrededores del hotel durante su estancia.
+                    </div>
+                    <div class="text-dark mb-5">
+                        TOTAL:----------------- <%=70000*n%> COP
+                    </div>   
+                </div>
+         <!--Termina gestión de servicios adicionales-->       
+
+                <div class="col-lg-5,5 mt-5 mt-lg-0">
+                    <!-- Inicia detalles -->
+                    <div class="d-flex flex-column text-center bg-white mb-2 py-6 px-4" style=" height: 98%;width: 380px; border-radius: 10px;">
+                        <h4 style="padding-top: 10%;">
+                            Detalles de la reserva
+                        </h4>
+                        <img src="img/Ordinaria_Parejas.jpg" class="img-fluid mx-auto mb-3" style="width: 250px; border-radius: 15%;">
+                        <h5 class="text mb-4" style="font-style: italic;"><%=data.nombreTipo%></h5>
+                        <h6 class="text-primary" style="text-align: left">
+                            Descripción
+                        </h6>
+                        <a class="text-body mb-5" style="text-align: left; font-size: 14px;">
+                            <%=data.Descripcion%>
+                        </a>
+                        <h6 class="text-primary mb-2" style="text-align: left">
+                            Check-in:
+                            <a class="text-body" style="font-size: 14px;"><%=fechai%>, 3:00 PM</a>
+                        </h6>
+                        <h6 class="text-primary mb-5" style="text-align: left">
+                            Check-out:
+                            <a class="text-body" style="font-size: 14px;"><%=fechaf%>, 1:00 PM</a>
+                        </h6>
+                        <h6 class="text-primary mb-5" style="text-align: left">
+                            Huespedes:
+                            <a class="text-body" style="font-size: 14px;"><%=data.cupoMax%> Personas</a>
+                        </h6>
+                        <h6 class="text-primary mb-5" style="text-align: left">
+                            Servicios: adicionales:
+                            <div id="inputTLabel" class="text-body invisible" style="font-size: 14px;">+Transporte</div>
+                            <div id="inputPLabel" class="text-body invisible" style="font-size: 14px;">+Parqueadero</div>
+                            <div id="inputRLabel" class="text-body invisible" style="font-size: 14px;">+Restaurante</div>
+                            <div id="inputLLabel" class="text-body invisible" style="font-size: 14px;">+Lavanderia</div>
+                            <div id="inputGLabel" class="text-body invisible" style="font-size: 14px;">+Guia turistica</div>
+                        </h6>
+                        <h6 class="text-dark" style="text-align: left; padding-top: 30%;">
+                            Habitación:------------- <%=data.precioUnitario*n%> COP
+                        </h6>
+                        <h6 id="total" class="text-dark mb-5" style="text-align: left">
+                            TOTAL:----------------- 2'220.000 COP
+                        </h6>
+                        <button id="pay" type="button mb-5" margin="auto" class="form-control" 
+                            style="background-color: blueviolet; border-radius: 10px; height: 60px; width: 250px; align-self: center;">
+                            <div class="text-white">
+                                Ir a pagar
+                            </div>
+                        </button>
+                    </div>
+                    <!--termina detalles-->
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- Termina servicios adicionales -->
+
+    <!-- Comienza el pie de pagina -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h3 class="text-primary"><span class="text-white">Horizonte</span> Del Llano</h3>
+                </a>
+                <p>Un paraiso de Acacías</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Redes Sociales</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>instagram</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facebook</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>LinkedIn</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Twitter</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Sitio Oficial</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Información</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Reservar</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guías</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Reseñas</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contáctanos</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>No. 23, Calle 12 #67, Acacías, Meta</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>Admin@HorizonteDelLlano.com</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Información</h6>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="#">El Horizonte Del Llano</a>. All Rights Reserved.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">Designed by <a href="">Hotel El Horizonte Del Llano</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Termina el pie de pagina-->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script>
+          var n = '<%= n %>';
+          var precio = '<%= data.precioUnitario %>';
+          var fechai='<%= fechai %>'
+          var fechaf='<%= fechaf %>'
+          var id='<%= id %>'
+  
+         window.n = n;
+         window.price = precio;
+         window.fechai=fechai
+         window.fechaf=fechaf
+         window.id=id
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/extras.js"></script>
+</body>
+
+</html>
