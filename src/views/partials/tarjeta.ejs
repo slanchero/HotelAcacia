@@ -13,7 +13,7 @@
       <p><%=habitacion.Descripcion%></p>
       <p>Precio: <%=habitacion.precioUnitario%> por noche</p>
       <button id="<%=habitacion.idHabitacion%>" class="btn btn-primary mt-1">Reservar</button>
-      <%if(habitacion.idTipoH){%>
+      <%if(habitacion.idTipoH==3){%>
       <p class="my-2">Cupos disponibles: <%=habitacion.cupoMax-habitacion.totalPersonasReservadas%></p>
       <%}%>
     </div>

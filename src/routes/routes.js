@@ -107,8 +107,13 @@ router.get("/pay",async (req,res)=>{
     }
 })
 
-router.get("/bookconfirm",(req,res)=>{
-    res.render("bookconfirm")
+router.get("/bookconfirm",async(req,res)=>{
+    const query=`select * from Reserva JOIN
+    (select * from Habitacion JOIN TipoHabitacion ON idTipo=idTipoH) AS temp ON idHabitacionReservada=temp.idHabitacion
+    WHERE numeroConfirmacion='${req.query.conf}'`
+    const result = await sequelize.query(query);
+    console.log(result)
+    res.render("bookconfirm",{data:result[0][0]})
 })
 
 module.exports=router 

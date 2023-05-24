@@ -32,9 +32,9 @@ const isParo = async (req, res) => {
 const parqueadero = async (req, res) => {
   try {
     const query = `DECLARE @base INT SET @base=25
-  SELECT (@base - COUNT(*)) AS ServicioParqueadero
-  FROM Reserva
-  Where servicioParqueadero='Sí' AND
+    SELECT (@base - COALESCE(COUNT(*),0)) AS ServicioParqueadero
+    FROM Reserva
+    Where servicioParqueadero='true' AND
   (fechaInicio BETWEEN '${req.query.fechai}' AND '${req.query.fechaf}' OR fechaFin BETWEEN '${req.query.fechai}' AND '${req.query.fechaf}')`;
     const result = await sequelize.query(query);
     res.json(result[0]);
@@ -44,7 +44,7 @@ const parqueadero = async (req, res) => {
 const transporte = async (req, res) => {
   try {
     const query = `DECLARE @base INT SET @base=20
-    SELECT (@base - SUM(totalPersonas)) AS ServicioTransporte
+    SELECT (@base - COALESCE(SUM(totalPersonas), 0)) AS ServicioTransporte
     FROM Reserva
     Where servicioTransporte='true' AND
     (fechaInicio BETWEEN '${req.query.fechai}' AND '${req.query.fechaf}' OR fechaFin BETWEEN '${req.query.fechai}' AND '${req.query.fechaf}')`;
@@ -56,7 +56,7 @@ const transporte = async (req, res) => {
 const restaurante = async (req, res) => {
   try {
     const query = `DECLARE @base INT SET @base=40
-    SELECT (@base - SUM(totalPersonas)) AS ServicioRestaurante
+    SELECT (@base - COALESCE(SUM(totalPersonas),0)) AS ServicioRestaurante
     FROM Reserva
     Where (servicioDesayuno='true' or servicioAlmuerzo='true' or servicioCena='true') AND
     (fechaInicio BETWEEN '${req.query.fechai}' AND '${req.query.fechaf}' OR fechaFin BETWEEN '${req.query.fechai}' AND '${req.query.fechaf}')`;

@@ -43,16 +43,14 @@
                         <h1 class="mb-3">Confirmación de Reserva</h1>
                         <p>¡Gracias por tu reserva! 
                         <br> Tu reserva ha sido confirmada y la factura enviada al correo. ¡Estamos emocionados de tenerte como nuestro huésped!</p>
-                        <!-- <p>Detalles de la reserva:</p>
-                        <p>Código de reserva: 32GF4A</p>
+                        <p>Detalles de la reserva:</p>
+                        <p>Código de Confirmacion: <%=data.numeroConfirmacion%></p>
                         <ul>
-                          <li>Fecha de llegada: 22 de mayo de 2023</li>
-                          <li>Hora: 15:20</li>
-                          <li>Fecha de salida: 28 de mayo de 2023</li>
-                          <li>Hora: 11:30</li>
-                          <li>Tipo de habitación: Habitación Doble</li>
-                          <li>Número de personas: 2</li>
-                        </ul> -->
+                          <li>Fecha de llegada: <%=data.fechaInicio%></li>
+                          <li>Fecha de salida: <%=data.fechaFin%></li>
+                          <li>Tipo de habitación: <%=data.nombreTipo%></li>
+                          <li>Número de personas: <%=data.totalPersonas%></li>
+                        </ul>
                         <p>Si tienes alguna pregunta o necesitas realizar cambios en tu reserva, por favor contáctanos.</p>
                         <p>¡Esperamos darte la bienvenida pronto!</p>
                         <p>Equipo de Reservas</p>

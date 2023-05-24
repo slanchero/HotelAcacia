@@ -43,7 +43,7 @@ boton.addEventListener("click", async () => {
     body: JSON.stringify(data),
   });
   localStorage.clear()
-  window.location.href = `/bookconfirm`;
+  window.location.href = `/bookconfirm?conf=${conf}`;
 });
 
 function uuidv4() {
